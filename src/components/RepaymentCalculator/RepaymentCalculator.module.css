@@ -1,0 +1,13 @@
+.main__element{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.repayment__container{
+    display: flex;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
