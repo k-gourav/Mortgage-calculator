@@ -35,12 +35,12 @@ const RepaymentCalculator = () => {
                 <div className={styles.mortgage__type}>
                     <div className={styles.mortgage__repayment}>
                         <input type="radio" name="repaymentMortgage" value="Repayment" id={styles.types__repayment} />
-                        <label htmlFor="types__repayment">Repayment</label>
+                        <label htmlFor="types__repayment" id={styles.label__repayment}>Repayment</label>
                     </div>
 
                     <div className={styles.mortgage__repayment}>
                         <input type="radio" name="interestMortgage" value="Interest Only" id={styles.types__interest} />
-                        <label htmlFor="types__interest">Interest Only</label>
+                        <label htmlFor="types__interest" id={styles.label__interest}>Interest Only</label>
                     </div>
                 </div>
             </div>
