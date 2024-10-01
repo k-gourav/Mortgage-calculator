@@ -1,42 +1,69 @@
-.main__element{
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.main__element {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.repayment__container{
-    display: flex;
-    background-color: #fff;
-    padding: 1.8rem 1.5rem;
-    border-radius: 20px;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+.repayment__container {
+  display: flex;
+  background-color: #fff;
+  padding: 1.8rem 1.5rem;
+  border-radius: 20px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
-.repayment__calculator{
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+.repayment__calculator {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
-.repayment__head{
-    display: flex;
-    align-items: center;
-    gap: 5rem;
+.repayment__head {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
 }
-.repayment__title{
-    font-size: 1.1rem;
+.repayment__title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2f4959;
+}
+.repayment__resetbtn {
+  border: none;
+  background-color: transparent;
+  color: #40637a;
+  font-family: inherit;
+  cursor: pointer;
+  border-bottom: 1px solid;
+}
+.repayment__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+label:not(#label__repayment):not(#label__interest) {
+  font-size: 0.8rem;
+  color: #527581;
+}
+.repayment__amount {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+input[type="number"] {
+  padding: 0.4rem 0.8rem;
+  outline: none;
+  border: none;
+  overflow: hidden;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.repayment__form p{
+    border: 1px solid;
+    border-radius: 4px;
+}
+span{
+    font-size: 0.9rem;
     font-weight: 600;
-}
-.repayment__resetbtn{
-    border: none;
-    background-color: transparent;
-    font-family: inherit;
-    cursor: pointer;
-    border-bottom: 1px solid;
-}
-.repayment__form{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-label:not(#label__repayment):not(#label__interest){
-    font-size: 0.88rem;
 }
