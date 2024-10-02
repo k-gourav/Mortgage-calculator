@@ -67,7 +67,7 @@ const RepaymentCalculator = () => {
                     </div>
                 </div>
             </div>
-            <button type="submit"><img src={calculatorIcon} alt="Calculator icon" /><p>Calculate Repayments</p></button>
+            <button type="submit"><img src={calculatorIcon} alt="Calculator icon" /><p id={styles.btn__text}>Calculate Repayments</p></button>
           </div>
         </div>
 

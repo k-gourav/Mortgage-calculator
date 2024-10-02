@@ -26,6 +26,11 @@
   font-weight: 600;
   color: #2f4959;
 }
+.repayment__termYear, .repayment__termRate{
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
 .repayment__resetbtn {
   border: none;
   background-color: transparent;
@@ -48,22 +53,32 @@ label:not(#label__repayment):not(#label__interest) {
   flex-direction: column;
   gap: 0.4rem;
 }
+.repayment__term_rate {
+  display: flex;
+  gap: 1.5rem;
+}
 input[type="number"] {
   padding: 0.4rem 0.8rem;
   outline: none;
   border: none;
-  overflow: hidden;
 }
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-.repayment__form p{
-    border: 1px solid;
-    border-radius: 4px;
+p:not(#btn__text) {
+  display: flex;
+  border: 1px solid;
+  border-radius: 4px;
+  align-items: center;
+  overflow: hidden;
 }
-span{
-    font-size: 0.9rem;
-    font-weight: 600;
+span {
+  display: block;
+  padding: 0.6rem 0.8rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  background-color: #e3f4fc;
+  color: #617783;
 }
