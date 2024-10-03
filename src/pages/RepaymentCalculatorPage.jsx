@@ -1,8 +1,8 @@
-import RepaymentCalculator from "../components/RepaymentCalculator/RepaymentCalculator";
+import RepaymentCalculatorWrapper from "../components/RepaymentCalculatorWrapper/RepaymentCalculatorWrapper";
 
 const RepaymentCalculatorPage = () => {
     return (
-        <RepaymentCalculator />
+        <RepaymentCalculatorWrapper />
     )
 }
 

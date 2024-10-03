@@ -26,9 +26,6 @@ const RepaymentCalculator = () => {
   }, [])
 
   return (
-    <main className={styles.main__element}>
-      <div className={styles.repayment__container}>
-        {/* Calculator Section */}
         <div className={styles.repayment__calculator}>
           <div className={styles.repayment__head}>
             <h1 className={styles.repayment__title}>Mortgage Calculator</h1>
@@ -70,11 +67,6 @@ const RepaymentCalculator = () => {
             <button type="submit"><img src={calculatorIcon} alt="Calculator icon" /><p id={styles.btn__text}>Calculate Repayments</p></button>
           </div>
         </div>
-
-        {/* Banner Section */}
-        <div className={styles.repayment__banner}></div>
-      </div>
-    </main>
   );
 };
 

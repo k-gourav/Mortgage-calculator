@@ -1,0 +1,8 @@
+.repayment__banner{
+    background-color: #133040;
+    padding: 2rem;
+    border-radius: 15px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 30px;
+    width: 50%;
+}

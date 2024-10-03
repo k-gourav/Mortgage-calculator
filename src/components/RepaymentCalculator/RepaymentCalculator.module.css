@@ -1,23 +1,13 @@
-.main__element {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.repayment__container {
-  display: flex;
-  background-color: #fff;
-  padding: 1.8rem 1.5rem;
-  border-radius: 20px;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-}
 .repayment__calculator {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.4rem;
+  padding: 1.8rem 1.5rem;
+  width: 50%;
 }
 .repayment__head {
   display: flex;
+  justify-content: space-around;
   align-items: center;
   gap: 5rem;
 }
@@ -26,11 +16,20 @@
   font-weight: 600;
   color: #2f4959;
 }
-.repayment__termYear, .repayment__termRate{
+.repayment__termYear,
+.repayment__termRate {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
+  width: 40%;
 }
+#termYear, #termRate{
+  width: 50%;
+}
+.repayment__termYear p ,.repayment__termRate p{
+  justify-content: space-between;
+}
+
 .repayment__resetbtn {
   border: none;
   background-color: transparent;
@@ -42,11 +41,17 @@
 .repayment__form {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.4rem;
 }
 label:not(#label__repayment):not(#label__interest) {
   font-size: 0.8rem;
   color: #527581;
+  font-weight: 500;
+}
+legend {
+  font-size: 0.8rem;
+  color: #527581;
+  font-weight: 500;
 }
 .repayment__amount {
   display: flex;
@@ -57,10 +62,35 @@ label:not(#label__repayment):not(#label__interest) {
   display: flex;
   gap: 1.5rem;
 }
+.repayment__type {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.mortgage__repayment {
+  display: flex;
+  gap: 0.8rem;
+  border: 1px solid #b4cfde;
+  color: #374c59;
+  padding: 0.5rem 0.8rem;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+.mortgage__type {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
 input[type="number"] {
   padding: 0.4rem 0.8rem;
   outline: none;
   border: none;
+  font-weight: 600;
+  letter-spacing: 0.024rem;
+  font-size: 1rem;
+  cursor: pointer;
 }
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
@@ -69,10 +99,13 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 p:not(#btn__text) {
   display: flex;
-  border: 1px solid;
+  border: 1px solid #658292;
   border-radius: 4px;
   align-items: center;
   overflow: hidden;
+}
+p:not(#btn__text):focus {
+  border: 1px solid #d9db30;
 }
 span {
   display: block;
@@ -81,4 +114,19 @@ span {
   font-weight: 600;
   background-color: #e3f4fc;
   color: #617783;
+}
+button[type="submit"] {
+  display: flex;
+  padding: 0.6rem 1rem;
+  align-items: center;
+  font-size: 0.9rem;
+  justify-content: center;
+  gap: 0.6rem;
+  font-family: inherit;
+  font-weight: 700;
+  border: none;
+  border-radius: 25px;
+  width: 60%;
+  background-color: #d9db30;
+  cursor: pointer;
 }
