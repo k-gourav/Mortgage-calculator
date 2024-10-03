@@ -11,3 +11,11 @@
   background-color: #fff;
   width: 55%;
 }
+
+@media screen and (max-width: 756px) {
+  .repayment__container{
+    flex-direction: column;
+    width: 100%;
+  }
+  
+}

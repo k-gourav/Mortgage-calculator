@@ -20,12 +20,14 @@
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
-  width: 40%;
-}
-#termYear, #termRate{
   width: 50%;
 }
-.repayment__termYear p ,.repayment__termRate p{
+#termYear,
+#termRate {
+  width: 50%;
+}
+.repayment__termYear p,
+.repayment__termRate p {
   justify-content: space-between;
 }
 
@@ -115,14 +117,14 @@ input[type="radio"] {
 }
 
 input[type="radio"]:checked::before {
-  content: '';
+  content: "";
   display: block;
-  width: 9px;
-  height: 9px;
+  width: 9.2px;
+  height: 9.2px;
   background-color: #d7e75f;
   border-radius: 50%;
   position: absolute;
-  top: 1.2px;
+  top: 1.3px;
   left: 1.2px;
 }
 p:not(#btn__text) {
@@ -140,6 +142,13 @@ span {
   background-color: #e3f4fc;
   color: #617783;
 }
+#error__message {
+  font-size: 0.7rem;
+  color: #cd3a32;
+  background-color: transparent;
+  padding: 0;
+  font-weight: 600;
+}
 button[type="submit"] {
   display: flex;
   padding: 0.6rem 1rem;
@@ -153,9 +162,31 @@ button[type="submit"] {
   border-radius: 25px;
   width: 65%;
   background-color: #d9db30;
+  color: #1e303a;
   cursor: pointer;
   margin-top: 1rem;
 }
-button[type="submit"]:hover{
+button[type="submit"]:hover {
   background-color: #e7e97a;
+}
+@media screen and (max-width: 756px) {
+  .repayment__calculator {
+    width: 100%;
+  }
+  .repayment__head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+  .repayment__term_rate {
+    flex-direction: column;
+  }
+  .repayment__termYear,
+  .repayment__termRate {
+    width: 100%;
+  }
+  button[type="submit"] {
+    width: 90%;
+    font-size: 1rem;
+  }
 }
