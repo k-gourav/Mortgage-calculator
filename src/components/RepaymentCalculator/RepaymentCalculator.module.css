@@ -2,19 +2,18 @@
   display: flex;
   flex-direction: column;
   gap: 1.4rem;
-  padding: 1.8rem 1.5rem;
-  width: 50%;
+  padding: 1.8rem;
+  width: 52%;
 }
 .repayment__head {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  gap: 5rem;
 }
 .repayment__title {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #2f4959;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #263c49;
 }
 .repayment__termYear,
 .repayment__termRate {
@@ -37,6 +36,7 @@
   font-family: inherit;
   cursor: pointer;
   border-bottom: 1px solid;
+  font-weight: 500;
 }
 .repayment__form {
   display: flex;
@@ -70,7 +70,7 @@ legend {
 .mortgage__repayment {
   display: flex;
   gap: 0.8rem;
-  border: 1px solid #b4cfde;
+  border: 1px solid #658292;
   color: #374c59;
   padding: 0.5rem 0.8rem;
   border-radius: 4px;
@@ -85,11 +85,13 @@ legend {
 }
 input[type="number"] {
   padding: 0.4rem 0.8rem;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #263f46;
   outline: none;
   border: none;
-  font-weight: 600;
   letter-spacing: 0.024rem;
-  font-size: 1rem;
   cursor: pointer;
 }
 input[type="number"]::-webkit-outer-spin-button,
@@ -97,15 +99,38 @@ input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  border: 2px solid #515150;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  align-self: center;
+}
+
+input[type="radio"]:checked::before {
+  content: '';
+  display: block;
+  width: 9px;
+  height: 9px;
+  background-color: #d7e75f;
+  border-radius: 50%;
+  position: absolute;
+  top: 1.2px;
+  left: 1.2px;
+}
 p:not(#btn__text) {
   display: flex;
   border: 1px solid #658292;
   border-radius: 4px;
   align-items: center;
   overflow: hidden;
-}
-p:not(#btn__text):focus {
-  border: 1px solid #d9db30;
 }
 span {
   display: block;
@@ -126,7 +151,11 @@ button[type="submit"] {
   font-weight: 700;
   border: none;
   border-radius: 25px;
-  width: 60%;
+  width: 65%;
   background-color: #d9db30;
   cursor: pointer;
+  margin-top: 1rem;
+}
+button[type="submit"]:hover{
+  background-color: #e7e97a;
 }
