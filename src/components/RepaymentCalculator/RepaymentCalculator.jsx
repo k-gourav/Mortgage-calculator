@@ -2,23 +2,59 @@ import { useEffect, useState } from "react";
 import calculatorIcon from "../../assets/icons/icon-calculator.svg";
 import styles from "./RepaymentCalculator.module.css";
 
-const RepaymentCalculator = () => {
-  const [mortgageInfo, setMortgageInfo] = useState({
-    amount: "",
-    term: "",
-    rate: "",
-    isFirstRadioChecked: false,
-    isSecondRadioChecked: false,
-  });
+const RepaymentCalculator = ({ inputData, setInputData }) => {
+  // const [mortgageInfo, setMortgageInfo] = useState({
+  //   amount: "",
+  //   term: "",
+  //   rate: "",
+  //   isFirstRadioChecked: false,
+  //   isSecondRadioChecked: false,
+  // });
   const amountHandler = (e) => {
-    setMortgageInfo((initialState) => ({ ...initialState, amount: e.target.value }));
+
+
+    // Update the formData object in the parent, preserving other key-value pairs
+    setInputData((prevData) => ({
+      ...prevData,
+      amount: e.target.value, // Update specific key in the object
+    }));
   };
+
   const rateHandler = (e) => {
-    setMortgageInfo((initialState) => ({ ...initialState, rate: e.target.value }));
+
+    // Update the formData object in the parent, preserving other key-value pairs
+    setInputData((prevData) => ({
+      ...prevData,
+      rate: e.target.value, // Update specific key in the object
+    }));
   };
+
   const termHandler = (e) => {
-    setMortgageInfo((initialState) => ({ ...initialState, term: e.target.value }));
+
+    // Update the formData object in the parent, preserving other key-value pairs
+    setInputData((prevData) => ({
+      ...prevData,
+      term: e.target.value, // Update specific key in the object
+    }));
   };
+
+  const mortgageTypeHandler = (e) => {
+    const { value } = e.target;
+    setInputData((prevData) => ({
+      ...prevData,
+      mortgageType: value, // Update mortgage type
+    }));
+  };
+
+  const resetInputHandler = () => {
+    setInputData({
+      amount: '',
+      term: '',
+      rate: '',
+      mortgageType: '',
+    });
+  };
+
 
   // const inputValidationHandler = () => {
   //   if (!mortgageInfo.amount) {
@@ -59,7 +95,7 @@ const RepaymentCalculator = () => {
     <div className={styles.repayment__calculator}>
       <div className={styles.repayment__head}>
         <h1 className={styles.repayment__title}>Mortgage Calculator</h1>
-        <button className={styles.repayment__resetbtn} type="reset">
+        <button className={styles.repayment__resetbtn} type="reset" onClick={resetInputHandler}>
           Clear All
         </button>
       </div>
@@ -74,11 +110,11 @@ const RepaymentCalculator = () => {
               name="mortgageamount"
               id={styles.mortgageamount}
               onChange={amountHandler}
-              value={mortgageInfo.amount}
+              value={inputData.amount}
               aria-label="Enter your mortgage amount"
             />
           </p>
-          <span id={styles.error__message}>This field is required</span>
+          {/* <span id={styles.error__message}>This field is required</span> */}
         </div>
 
         <div className={styles.repayment__term_rate}>
@@ -90,12 +126,12 @@ const RepaymentCalculator = () => {
                 name="term"
                 id={styles.termYear}
                 onChange={termHandler}
-                value={mortgageInfo.term}
+                value={inputData.term}
                 aria-label="Enter your mortgage terms"
               />
               <span>years</span>
             </p>
-            {!mortgageInfo.term && <span id={styles.error__message}>This field is required</span>}
+            {/* {!mortgageInfo.term && <span id={styles.error__message}>This field is required</span>} */}
           </div>
           <div className={styles.repayment__termRate}>
             <label htmlFor="termRate">Interest Rate</label>
@@ -105,12 +141,12 @@ const RepaymentCalculator = () => {
                 name="interestRate"
                 id={styles.termRate}
                 onChange={rateHandler}
-                value={mortgageInfo.rate}
+                value={inputData.rate}
                 aria-label="Enter your interest rate"
               />
               <span>%</span>
             </p>
-            {!mortgageInfo.rate && <span id={styles.error__message}>This field is required</span>}
+            {/* {!mortgageInfo.rate && <span id={styles.error__message}>This field is required</span>} */}
           </div>
         </div>
 
@@ -124,6 +160,8 @@ const RepaymentCalculator = () => {
                 name="mortgageType"
                 value="Repayment"
                 id={styles.types__repayment}
+                onChange={mortgageTypeHandler}
+                checked={inputData.mortgageType === "Repayment"}
               />
               <label
                 htmlFor={styles.types__repayment}
@@ -139,6 +177,8 @@ const RepaymentCalculator = () => {
                 name="mortgageType"
                 value="Interest Only"
                 id={styles.types__interest}
+                onChange={mortgageTypeHandler}
+                checked={inputData.mortgageType === "Interest Only"}
               />
               <label
                 htmlFor={styles.types__interest}
