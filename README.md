@@ -1,6 +1,9 @@
 # Mortgage Calculator
 
-A responsive mortgage calculator that displays your monthly and total mortgage repayments. Built with React, this project helps users estimate their monthly mortgage payments based on loan amount, interest rate, and loan term. It features a clean UI and responsive design, ensuring ease of use across different devices.
+A responsive mortgage calculator that displays your monthly and total mortgage repayments. Built with React, this project helps users estimate their monthly mortgage payments based on loan amount, interest rate, and loan term. It features a clean UI and responsive design, ensuring ease of use across different devices. <br >
+
+![project-demo](https://github.com/user-attachments/assets/8f1c20fa-c7f6-4e17-b1e9-4b25a5aa91db)
+
 
 ## Features
 
