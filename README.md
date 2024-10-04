@@ -1,8 +1,54 @@
-# React + Vite
+# Signup Form
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive mortgage calculator that displays your monthly and total mortgage repayments. Built with React, this project helps users estimate their monthly mortgage payments based on loan amount, interest rate, and loan term. It features a clean UI and responsive design, ensuring ease of use across different devices.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-   User friendly mortgage calculator
+-   Client-side calculator form validation
+-   CSS Modules for scoped styling
+-   Responsive design for various screen sizes
+-   Real-time calculation of monthly and total payments
+
+## Technologies Used
+
+-   React (with Hooks and Form Validation)
+-   Vite (for fast builds)
+-   CSS Modules
+-   Netlify (for deployment)
+
+## Installation
+
+1.  Clone the repository:
+
+    ``` bash
+    git clone https://github.com/k-gourav/Mortgage-calculator.git
+    ```
+
+2.  Navigate to the project directory:
+
+    ``` bash
+    cd Mortgage-calculator
+    ```
+
+3.  Install dependencies:
+
+    ``` bash
+    npm install
+    ```
+
+4.  Run the project:
+
+    ``` bash
+    npm run dev
+    ```
+
+## Deployment
+
+The app is deployed on Netlify. You can view the live version
+[here](https://mortgagecalculator-app.netlify.app).
+
+## Contributing
+
+Pull requests are welcome. For significant changes, please open an issue
+to discuss what you would like to change.
