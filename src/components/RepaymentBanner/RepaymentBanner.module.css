@@ -54,7 +54,6 @@
   margin-top: 0.1rem;
 }
 .banner__content {
-  width: 95%;
   text-align: center;
 }
 .banner__title {
@@ -73,8 +72,8 @@
 
 @media screen and (max-width: 756px) {
   .repayment__banner {
-    width: 100%;
     border-radius: 0;
+    width: 100%;
   }
   .banner__content {
     width: 100%;

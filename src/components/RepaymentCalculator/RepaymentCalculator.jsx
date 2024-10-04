@@ -114,8 +114,8 @@ const RepaymentCalculator = ({ inputData, setInputData }) => {
       <div className={styles.repayment__form}>
         <div className={styles.repayment__amount}>
           <label htmlFor="mortgageamount">Mortgage Amount</label>
-          <p>
-            <span>£</span>
+          <p className={errorMessage.amount ? styles.error__space : ''}>
+            <span className={errorMessage.amount ? styles.error__field : ''}>£</span>
             <input
               type="number"
               name="mortgageamount"
@@ -133,7 +133,7 @@ const RepaymentCalculator = ({ inputData, setInputData }) => {
         <div className={styles.repayment__term_rate}>
           <div className={styles.repayment__termYear}>
             <label htmlFor="term">Mortgage Term</label>
-            <p>
+            <p className={errorMessage.term ? styles.error__space : ''}>
               <input
                 type="number"
                 name="term"
@@ -142,7 +142,7 @@ const RepaymentCalculator = ({ inputData, setInputData }) => {
                 value={inputData.term}
                 aria-label="Enter your mortgage terms"
               />
-              <span>years</span>
+              <span className={errorMessage.term ? styles.error__field : ''}>years</span>
             </p>
             {errorMessage.term && (
               <span id={styles.error__message}>{errorMessage.term}</span>
@@ -150,7 +150,7 @@ const RepaymentCalculator = ({ inputData, setInputData }) => {
           </div>
           <div className={styles.repayment__termRate}>
             <label htmlFor="termRate">Interest Rate</label>
-            <p>
+            <p className={errorMessage.rate ? styles.error__space : ''}>
               <input
                 type="number"
                 name="interestRate"
@@ -159,7 +159,7 @@ const RepaymentCalculator = ({ inputData, setInputData }) => {
                 value={inputData.rate}
                 aria-label="Enter your interest rate"
               />
-              <span>%</span>
+              <span className={errorMessage.rate ? styles.error__field : ''}>%</span>
             </p>
             {errorMessage.rate && (
               <span id={styles.error__message}>{errorMessage.rate}</span>
@@ -171,7 +171,7 @@ const RepaymentCalculator = ({ inputData, setInputData }) => {
           <legend>Mortgage Type</legend>
           {/* Radio input types */}
           <div className={styles.mortgage__type}>
-            <div className={styles.mortgage__repayment}>
+            <div className={styles.mortgage__repayment} id={(inputData.mortgageType === "Repayment") ? styles.radioColoredOne : ""}>
               <input
                 type="radio"
                 name="mortgageType"
@@ -188,7 +188,7 @@ const RepaymentCalculator = ({ inputData, setInputData }) => {
               </label>
             </div>
 
-            <div className={styles.mortgage__repayment}>
+            <div className={styles.mortgage__repayment} id={(inputData.mortgageType === "Interest Only") ? styles.radioColored : ""}>
               <input
                 type="radio"
                 name="mortgageType"

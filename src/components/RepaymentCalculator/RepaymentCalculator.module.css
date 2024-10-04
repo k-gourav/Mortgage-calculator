@@ -121,13 +121,13 @@ input[type="radio"]:checked{
 input[type="radio"]:checked::before {
   content: "";
   display: block;
-  width: 9.2px;
-  height: 9.2px;
+  width: 10px;
+  height: 10px;
   background-color: #d7e75f;
   border-radius: 50%;
   position: absolute;
-  top: 1.23px;
-  left: 1.2px;
+  top: 1px;
+  left: 1px;
 }
 p:not(#btn__text) {
   display: flex;
@@ -150,6 +150,17 @@ span {
   background-color: transparent;
   padding: 0;
   font-weight: 600;
+}
+.error__field{
+  background-color: #cd3a32;
+  color: #fff;
+}
+.error__space{
+  border: 1px solid #cd3a32 !important;
+}
+#radioColored, #radioColoredOne{
+  background-color: #f7ffbe5d;
+  border: 1px solid #e4f65b;
 }
 button[type="submit"] {
   display: flex;
