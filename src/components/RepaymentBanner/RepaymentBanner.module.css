@@ -1,11 +1,17 @@
 .repayment__banner{
+    padding: 2rem 1.5rem;
     background-color: #133040;
-    padding: 1rem;
     border-radius: 15px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 50px;
     width: 50%;
     display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+#banner__One{
+    display: flex;
+    padding: 2rem 2.5rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -13,29 +19,38 @@
 }
 #instruction{
     border: none !important;
-    color: #6f8ba0;
+    color: #80a6c3;
     font-weight: 500;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
+    line-height: 1.55;
 }
-#monthly__repay{
+#monthly__repay, #total__repay{
     border: none !important;
-    color: #dcdce3;
+    color: #81a5c1;
+    font-size: 0.8rem;
+}
+#total__repay{
+    padding-top: 1rem;
 }
 .monthly__repayamount{
     color: #d9db30;
-}
-#total__repay{
-    border: none !important;
+    font-size: 2.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #1b4054;
 }
 .total__repayamount{
     color: #fff;
+    font-size: 1.3rem;
 }
 .mortgage__values{
     background-color: #0b1d27;
     border-radius: 10px;
     padding: 2rem;
-    border-top: 3px solid #d9db30;
-
+    border-top: 4px solid #d9db30;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-top: 0.1rem;
 }
 .banner__content{
     width: 95%;
@@ -43,14 +58,16 @@
 }
 .banner__title{
     color: #f0f0f1;
-    font-size: 1rem;
+    font-size: 1.1rem;
     margin-bottom: 1rem;
+    font-weight: 600;
 }
 #banner__body{
-    color: #6f8ba0;
-    font-weight: 600;
-    font-size: 0.85rem;
+    color: #7897ae;
+    font-weight: 500;
+    font-size: 0.8rem;
     border: none !important;
+    line-height: 1.5;
 }
 
 @media screen and (max-width: 756px) {

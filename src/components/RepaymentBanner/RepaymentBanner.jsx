@@ -6,7 +6,7 @@ import styles from './RepaymentBanner.module.css';
 function RepaymentBanner({ inputData }) {
   const validInputData = inputData.amount && inputData.rate && inputData.term && inputData.mortgageType && inputData.buttonClicked;
   return (
-    <div className={styles.repayment__banner}>
+    <div className={styles.repayment__banner} id={validInputData ? '' : styles.banner__One}>
       {validInputData ? (
         <>
           <div className={styles.banner__contentOne}>
@@ -19,7 +19,7 @@ function RepaymentBanner({ inputData }) {
             <p id={styles.monthly__repay}>Your monthly repayments</p>
             <h3 className={styles.monthly__repayamount}>£ {monthlyInterest(inputData.amount, inputData.rate, inputData.term).toFixed(2)}</h3>
             <p id={styles.total__repay}>Total you'll repay over the term</p>
-            <h3 className={styles.total__repayamount}>£{totalRepayment(inputData.amount, inputData.rate, inputData.term).toFixed(2)}</h3>
+            <h3 className={styles.total__repayamount}>£ {totalRepayment(inputData.amount, inputData.rate, inputData.term).toFixed(2)}</h3>
           </div>
         </>
       ) : (
