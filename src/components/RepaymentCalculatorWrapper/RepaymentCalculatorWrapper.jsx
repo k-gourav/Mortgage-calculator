@@ -8,9 +8,10 @@ const RepaymentCalculatorWrapper = () => {
     amount: '',        
     term: '',          
     rate: '',          
-    mortgageType: '',  
+    mortgageType: '', 
+    buttonClicked: false, 
   })
-  
+
   return (
     <main className={styles.main__element}>
       <div className={styles.repayment__container}>

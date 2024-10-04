@@ -3,13 +3,39 @@
     padding: 1rem;
     border-radius: 15px;
     border-top-left-radius: 0;
-    border-bottom-left-radius: 30px;
+    border-bottom-left-radius: 50px;
     width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1rem;
+}
+#instruction{
+    border: none !important;
+    color: #6f8ba0;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+#monthly__repay{
+    border: none !important;
+    color: #dcdce3;
+}
+.monthly__repayamount{
+    color: #d9db30;
+}
+#total__repay{
+    border: none !important;
+}
+.total__repayamount{
+    color: #fff;
+}
+.mortgage__values{
+    background-color: #0b1d27;
+    border-radius: 10px;
+    padding: 2rem;
+    border-top: 3px solid #d9db30;
+
 }
 .banner__content{
     width: 95%;

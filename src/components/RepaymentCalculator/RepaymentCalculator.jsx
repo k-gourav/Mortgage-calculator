@@ -9,6 +9,7 @@ const RepaymentCalculator = ({ inputData, setInputData }) => {
     term: "",
     mortgageType: "",
   });
+
   const amountHandler = (e) => {
     setInputData((prevData) => ({
       ...prevData,
@@ -52,7 +53,7 @@ const RepaymentCalculator = ({ inputData, setInputData }) => {
     });
   };
 
-  const inputValidationHandler = () => {
+  const inputValidationHandler = (e) => {
     const newErrors = {};
     if (!inputData.amount) {
       newErrors.amount = "This field is required";
@@ -69,7 +70,10 @@ const RepaymentCalculator = ({ inputData, setInputData }) => {
     setErrorMessage(newErrors);
 
     if (Object.keys(newErrors).length === 0) {
-      setInputData(inputData);
+      setInputData((prevData) => ({
+        ...prevData,
+        buttonClicked: e.target,
+      }));
     }
   };
 
