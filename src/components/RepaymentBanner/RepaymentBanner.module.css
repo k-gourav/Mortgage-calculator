@@ -1,87 +1,88 @@
-.repayment__banner{
-    padding: 2rem 1.5rem;
-    background-color: #133040;
-    border-radius: 15px;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 50px;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+.repayment__banner {
+  padding: 2rem 1.5rem;
+  background-color: #133040;
+  border-radius: 15px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 50px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
-#banner__One{
-    display: flex;
-    padding: 2rem 2.5rem;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
+#banner__One {
+  display: flex;
+  padding: 2rem 2.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
-#instruction{
-    border: none !important;
-    color: #80a6c3;
-    font-weight: 500;
-    font-size: 0.88rem;
-    line-height: 1.55;
+#instruction {
+  border: none !important;
+  color: #80a6c3;
+  font-weight: 500;
+  font-size: 0.88rem;
+  line-height: 1.55;
 }
-#monthly__repay, #total__repay{
-    border: none !important;
-    color: #81a5c1;
-    font-size: 0.8rem;
+#monthly__repay,
+#total__repay {
+  border: none !important;
+  color: #81a5c1;
+  font-size: 0.8rem;
 }
-#total__repay{
-    padding-top: 1rem;
+#total__repay {
+  padding-top: 1rem;
 }
-.monthly__repayamount{
-    color: #d9db30;
-    font-size: 2.5rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid #1b4054;
+.monthly__repayamount {
+  color: #d9db30;
+  font-size: 2.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #1b4054;
 }
-.total__repayamount{
-    color: #fff;
-    font-size: 1.3rem;
+.total__repayamount {
+  color: #fff;
+  font-size: 1.3rem;
 }
-.mortgage__values{
-    background-color: #0b1d27;
-    border-radius: 10px;
-    padding: 2rem;
-    border-top: 4px solid #d9db30;
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-    margin-top: 0.1rem;
+.mortgage__values {
+  background-color: #0e2431;
+  border-radius: 10px;
+  padding: 2rem;
+  border-top: 4px solid #d9db30;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-top: 0.1rem;
 }
-.banner__content{
-    width: 95%;
-    text-align: center;
+.banner__content {
+  width: 95%;
+  text-align: center;
 }
-.banner__title{
-    color: #f0f0f1;
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
-    font-weight: 600;
+.banner__title {
+  color: #f0f0f1;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
 }
-#banner__body{
-    color: #7897ae;
-    font-weight: 500;
-    font-size: 0.8rem;
-    border: none !important;
-    line-height: 1.5;
+#banner__body {
+  color: #7897ae;
+  font-weight: 500;
+  font-size: 0.8rem;
+  border: none !important;
+  line-height: 1.5;
 }
 
 @media screen and (max-width: 756px) {
-    .repayment__banner{
-        width: 100%;
-        border-radius: 0;
-    }
-    .banner__content{
-        width: 100%;
-    }
-    .banner__title{
-        font-size: 1.1rem;
-    }
-    #banner__body{
-        font-size: 0.93rem;
-    }
+  .repayment__banner {
+    width: 100%;
+    border-radius: 0;
+  }
+  .banner__content {
+    width: 100%;
+  }
+  .banner__title {
+    font-size: 1.1rem;
+  }
+  #banner__body {
+    font-size: 0.93rem;
+  }
 }
