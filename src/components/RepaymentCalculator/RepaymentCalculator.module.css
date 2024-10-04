@@ -115,7 +115,9 @@ input[type="radio"] {
   cursor: pointer;
   align-self: center;
 }
-
+input[type="radio"]:checked{
+  border: 2px solid #d7e75f;
+}
 input[type="radio"]:checked::before {
   content: "";
   display: block;

@@ -3,72 +3,75 @@ import calculatorIcon from "../../assets/icons/icon-calculator.svg";
 import styles from "./RepaymentCalculator.module.css";
 
 const RepaymentCalculator = ({ inputData, setInputData }) => {
-  // const [mortgageInfo, setMortgageInfo] = useState({
-  //   amount: "",
-  //   term: "",
-  //   rate: "",
-  //   isFirstRadioChecked: false,
-  //   isSecondRadioChecked: false,
-  // });
+  const [errorMessage, setErrorMessage] = useState({
+    amount: "",
+    rate: "",
+    term: "",
+    mortgageType: "",
+  });
   const amountHandler = (e) => {
-
-
-    // Update the formData object in the parent, preserving other key-value pairs
     setInputData((prevData) => ({
       ...prevData,
-      amount: e.target.value, // Update specific key in the object
+      amount: e.target.value,
     }));
   };
 
   const rateHandler = (e) => {
-
-    // Update the formData object in the parent, preserving other key-value pairs
     setInputData((prevData) => ({
       ...prevData,
-      rate: e.target.value, // Update specific key in the object
+      rate: e.target.value,
     }));
   };
 
   const termHandler = (e) => {
-
-    // Update the formData object in the parent, preserving other key-value pairs
     setInputData((prevData) => ({
       ...prevData,
-      term: e.target.value, // Update specific key in the object
+      term: e.target.value,
     }));
   };
 
   const mortgageTypeHandler = (e) => {
-    const { value } = e.target;
     setInputData((prevData) => ({
       ...prevData,
-      mortgageType: value, // Update mortgage type
+      mortgageType: e.target.value,
     }));
   };
 
   const resetInputHandler = () => {
     setInputData({
-      amount: '',
-      term: '',
-      rate: '',
-      mortgageType: '',
+      amount: "",
+      term: "",
+      rate: "",
+      mortgageType: "",
+    });
+    setErrorMessage({
+      amount: "",
+      term: "",
+      rate: "",
+      mortgageType: "",
     });
   };
 
+  const inputValidationHandler = () => {
+    const newErrors = {};
+    if (!inputData.amount) {
+      newErrors.amount = "This field is required";
+    }
+    if (!inputData.term) {
+      newErrors.term = "This field is required";
+    }
+    if (!inputData.rate) {
+      newErrors.rate = "This field is required";
+    }
+    if (!inputData.mortgageType) {
+      newErrors.mortgageType = "This field is required";
+    }
+    setErrorMessage(newErrors);
 
-  // const inputValidationHandler = () => {
-  //   if (!mortgageInfo.amount) {
-  //     mortgageInfo.amount = false;
-  //   }
-  //   if (!mortgageInfo.rate) {
-  //     mortgageInfo.rate = false;
-  //   }
-  //   if (!mortgageInfo.year){
-  //     mortgageInfo.year= false;
-  //   }
-
-
-  // }
+    if (Object.keys(newErrors).length === 0) {
+      setInputData(inputData);
+    }
+  };
 
   useEffect(() => {
     const numberInput = document.querySelectorAll('input[type="number"]');
@@ -95,7 +98,11 @@ const RepaymentCalculator = ({ inputData, setInputData }) => {
     <div className={styles.repayment__calculator}>
       <div className={styles.repayment__head}>
         <h1 className={styles.repayment__title}>Mortgage Calculator</h1>
-        <button className={styles.repayment__resetbtn} type="reset" onClick={resetInputHandler}>
+        <button
+          className={styles.repayment__resetbtn}
+          type="reset"
+          onClick={resetInputHandler}
+        >
           Clear All
         </button>
       </div>
@@ -114,7 +121,9 @@ const RepaymentCalculator = ({ inputData, setInputData }) => {
               aria-label="Enter your mortgage amount"
             />
           </p>
-          {/* <span id={styles.error__message}>This field is required</span> */}
+          {errorMessage.amount && (
+            <span id={styles.error__message}>{errorMessage.amount}</span>
+          )}
         </div>
 
         <div className={styles.repayment__term_rate}>
@@ -131,7 +140,9 @@ const RepaymentCalculator = ({ inputData, setInputData }) => {
               />
               <span>years</span>
             </p>
-            {/* {!mortgageInfo.term && <span id={styles.error__message}>This field is required</span>} */}
+            {errorMessage.term && (
+              <span id={styles.error__message}>{errorMessage.term}</span>
+            )}
           </div>
           <div className={styles.repayment__termRate}>
             <label htmlFor="termRate">Interest Rate</label>
@@ -146,7 +157,9 @@ const RepaymentCalculator = ({ inputData, setInputData }) => {
               />
               <span>%</span>
             </p>
-            {/* {!mortgageInfo.rate && <span id={styles.error__message}>This field is required</span>} */}
+            {errorMessage.rate && (
+              <span id={styles.error__message}>{errorMessage.rate}</span>
+            )}
           </div>
         </div>
 
@@ -188,8 +201,11 @@ const RepaymentCalculator = ({ inputData, setInputData }) => {
               </label>
             </div>
           </div>
+          {errorMessage.mortgageType && (
+            <span id={styles.error__message}>{errorMessage.mortgageType}</span>
+          )}
         </div>
-        <button type="submit">
+        <button type="submit" onClick={inputValidationHandler}>
           <img src={calculatorIcon} alt="Calculator icon" />
           <p id={styles.btn__text}>Calculate Repayments</p>
         </button>
