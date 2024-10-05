@@ -57,12 +57,18 @@ const RepaymentCalculator = ({ inputData, setInputData }) => {
     const newErrors = {};
     if (!inputData.amount) {
       newErrors.amount = "This field is required";
+    } else if (inputData.amount <= 0){
+      newErrors.amount = "Please enter valid number"
     }
     if (!inputData.term) {
       newErrors.term = "This field is required";
+    } else if (inputData.term <= 0){
+      newErrors.term = "Please enter valid number"
     }
     if (!inputData.rate) {
       newErrors.rate = "This field is required";
+    } else if (inputData.rate <= 0){
+      newErrors.rate = "Please enter valid number"
     }
     if (!inputData.mortgageType) {
       newErrors.mortgageType = "This field is required";
